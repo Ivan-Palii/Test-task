@@ -1,15 +1,19 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
 
+import MainLayout from '@/layouts/MainLayout.vue'
+import MainPage from '@/pages/MainPage.vue'
+
+
 const routes = [
   {
-    path: '/',
-    component: () => import('@/layouts/MainLayout.vue'),
+    path: '/Test-task/',
+    component: MainLayout,
     children: [
       {
         path: '',
         name: 'Main',
-        component: ()=> import('@/pages/MainPage.vue')
+        component: MainPage
       },
     ],
   },
